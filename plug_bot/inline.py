@@ -40,7 +40,7 @@ async def answer(client, inline_query):
             InlineQueryResultArticle(
                 title="اوامر البوت",
                 input_message_content=InputTextMessageContent(
-                    "• اهلا بك في اوامر اليوزر البوت\n•"
+                    "• اهلا بك في اوامر سورس المرتجل\n•"
                 ),
                 url="https://t.me/AlmortagelTech",
                 description=" SOURCE",
