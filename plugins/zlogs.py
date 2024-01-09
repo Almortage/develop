@@ -29,7 +29,7 @@ async def pv_cmd(c, msg):
                 r.set(f"{sudo_id}waiting{msg.chat.id}", "on")
                 async for photo in c.get_chat_photos("me"):
                     if photo:
-                        txx = "بخ 👻👻👻👻😂😂😂😂 \n ▁▁▁▁▁▁▁▁♆▁▁▁▁▁▁▁▁▁▁▁\nمتخفش يا رايق انا بهزر معاك 😂 المهم نورت شاتي الخاص\n▁▁▁▁▁▁▁▁♆▁▁▁▁▁▁▁▁▁▁▁\nاولا صلي على النبي ❤️💕(عليه افضل الصلاة والسلام) \n▁▁▁▁▁▁▁▁♆▁▁▁▁▁▁▁▁▁▁▁\nمتزعلش يا رايق انا قافل دلوقتي اول ما افتح اكلمك كفايه انك نورتني في شاتي الخاص 💕❤️ \n▁▁▁▁▁▁▁▁♆▁▁▁▁▁▁▁▁▁▁▁\n [🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱](https://t.me/Source_Ze)"
+                        txx = "• ان مطوري مشغول الان \n• ارسل رسالتك وسوف يتم الرد عليك قريبا"
                         await msg.reply_photo(photo.file_id, caption=txx)
                         break
                     else:
@@ -59,14 +59,14 @@ async def gp(client, msg):
         if msg.from_user:
             try:
                 txt = f"• لديك منشن من العضو [{msg.from_user.first_name}](tg://user?id={msg.from_user.id}) \n• اسم الجروب {msg.chat.title} \n• الوقت {current_time} \n{msg_link}"
-                await bot.send_message(pm, txt)
-                await bot.send_message(pm, msg.text)
+                await app.send_message(mention, txt)
+                await msg.forward(mention)
             except:
                 pass
         else:
             txt = f"• لديك منشن من القناه {msg.sender_chat.title} \n• اسم الجروب {msg.chat.title} \n• الوقت {current_time} \n{msg_link}"
-            await bot.send_message(pm, txt)
-            await bot.send_message(pm, msg.text)
+            await app.send_message(mention, txt)
+            await msg.forward(mention)
     if msg.from_user:
         sender_id = msg.from_user.id
     elif msg.sender_chat:
