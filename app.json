@@ -1,14 +1,14 @@
 {
 	"name": "telethon ze",
 	"description": "اول تنصيب بوت تليثون عربي بكود بايروجرام مقدم من سورس زد إي!",
-	"logo": "https://telegra.ph/file/a2d349a2e67a63772a0bb.jpg",
+	"logo": "https://telegra.ph/file/5116db79f852db113875c.jpg",
 	"keywords": [
 		"telegram",
 		"bot",
 		"python",
 		"telethon"
 	],
-	"repository": "https://github.com/modymesourceze/develop",
+	"repository": "https://github.com/Almortage/develop",
     "env": {
         "TG_BOT_TOKEN": {
             "description": "Your Telegram Bot Token from @BotFather",
