@@ -2390,7 +2390,6 @@ async def fela(client: Client, message: Message):
 # FILES WRITTEN BY  @lMl10l
 
 import asyncio
-from telethon import events
 from jepthon import jepiq
 import random
 from ..core.managers import edit_or_reply
