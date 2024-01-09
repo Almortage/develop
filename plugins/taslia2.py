@@ -1352,6 +1352,34 @@ async def hak(client: Client, message: Message):
  
 # == == == == == == == == == == == == == == == == == == == ==
 
+@Client.on_message(filters.command("تهكير", ".") & filters.me)
+async def hak(client: Client, message: Message):
+  await message.edit_text("يتـم الاختـراق ..")
+  asyncio.sleep(2)
+  await message.edit_text(" ᯽︙ تـم الربـط بسـيرفرات الـتهكير الخـاصة")
+   asyncio.sleep(2)
+  await message.edit_text("تـم تحـديد الضحـية")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ )
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")   
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 84%\n█████████████████████▒▒▒▒")
+  asyncio.sleep(2)
+  await message.edit_text("**تهكيـر**... 100%\n████████████████████████")
+  asyncio.sleep(2)
+  await message.edit_text("᯽︙ ** تـم اخـتراق الضـحية**..\n\nقـم بالـدفع الى المرتجل لعـدم نشـر معلوماتك وصـورك")
+  
+  # == == == == == == == == == == == == == == == == == == == ==
+
 @Client.on_message(filters.command("شرطة$", prefixes=f".") & filters.me)
 async def offeser_1(c, msg):
     if not msg.reply_to_message:
@@ -2385,28 +2413,3 @@ async def fela(client: Client, message: Message):
         await asyncio.sleep(animation_interval)
         await message.edit(animation_chars[i % 6])       
        
-@Client.on_message(filters.command("تهكير", ".") & filters.me)
-async def hak(client: Client, message: Message):
-  await message.edit_text("يتـم الاختـراق ..")
-  asyncio.sleep(2)
-  await message.edit_text(" ᯽︙ تـم الربـط بسـيرفرات الـتهكير الخـاصة")
-   asyncio.sleep(2)
-  await message.edit_text("تـم تحـديد الضحـية")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")   
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 84%\n█████████████████████▒▒▒▒ ")
-  asyncio.sleep(2)
-  await message.edit_text("**تهكيـر**... 100%\n████████████████████████ ")
-  asyncio.sleep(2)
-  await message.edit_text("᯽︙ ** تـم اخـتراق الضـحية**..\n\nقـم بالـدفع الى المرتجل لعـدم نشـر معلوماتك وصـورك")
