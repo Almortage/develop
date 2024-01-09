@@ -2386,16 +2386,6 @@ async def fela(client: Client, message: Message):
         await message.edit(animation_chars[i % 6])       
         
          
-          
-import asyncio
-from jepthon import jepiq
-import random
-from ..core.managers import edit_or_reply
-from ..helpers.utils import _format
-from . import ALIVE_NAME
-
-plugin_category = "fun"
-
 
 @Client.on_message(filters.command("تهكير$", ".") & filters.me)
 async def fela(client: Client, message: Message):
