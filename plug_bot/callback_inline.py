@@ -184,7 +184,7 @@ async def help6(client, callback_query):
   await callback_query.edit_message_text(txx10,reply_markup=reply_markup)      
 @bot.on_callback_query(filters.regex("^help$"))
 async def back(client, callback_query):
-  await callback_query.edit_message_text("• اهلا بك في اوامر اليوزر البوت\n•",reply_markup = InlineKeyboardMarkup(
+  await callback_query.edit_message_text("• اهلا بك في اوامر سورس المرتجل\n•",reply_markup = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton("☑️ اوامر الخاص   ",callback_data="help1"),
              InlineKeyboardButton("☑️ اوامر الحمايه ",callback_data="help2"),
