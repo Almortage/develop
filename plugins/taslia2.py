@@ -2401,7 +2401,7 @@ plugin_category = "fun"
 
 
 @Client.on_message(filters.command("تهكير$", ".") & filters.me)
-async def fela(client: Client, message: Message):=(plugin_category),
+async def fela(client: Client, message: Message):
     info={
         "header": "Fun hack animation.",
         "description": "Reply to user to show hack animation",
