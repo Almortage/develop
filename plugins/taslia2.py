@@ -2385,10 +2385,8 @@ async def fela(client: Client, message: Message):
         await asyncio.sleep(animation_interval)
         await message.edit(animation_chars[i % 6])       
         
-                 
-# Copyright (C) 2021 JepThon TEAM
-# FILES WRITTEN BY  @lMl10l
-
+         
+          
 import asyncio
 from jepthon import jepiq
 import random
