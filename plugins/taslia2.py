@@ -2408,7 +2408,6 @@ async def fela(client: Client, message: Message):=("تهكير", plugin_category
         "note": "This is just for fun. Not real hacking.",
         "usage": "{tr}hack",
     },
-)
 async def _(event):
     "Fun hack animation."
     if event.reply_to_msg_id:
