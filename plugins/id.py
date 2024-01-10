@@ -1,6 +1,7 @@
 from pyrogram import Client, filters,enums
 from config import *
 import asyncio
+#سورس القرش بيمسي - @T_3_A
 
 def get_name(msg):
   if msg.from_user.last_name :
@@ -17,7 +18,7 @@ def get_name(msg):
 async def get_info(c,msg):
   if msg.reply_to_message :
     if msg.reply_to_message.sender_chat :
-      return await msg.edit("• دي قناه ياهبل")
+      return await msg.edit("✪ دي قناه ي ليفه")
     if msg.reply_to_message.from_user.username :
       username = f"@{msg.reply_to_message.from_user.username}"
     else :
@@ -27,7 +28,7 @@ async def get_info(c,msg):
       bio = f"{get_bio.bio}"
     else :
       bio = "لا يوجد"
-    txx = f"• اسمه : {get_name(msg.reply_to_message)}\n• معرفه : {username} \n• ايديه : `{msg.reply_to_message.from_user.id}` \n• البايو : {bio}"
+    txx = f"✪ اسمه : {get_name(msg.reply_to_message)}\n✪ معرفه : {username} \n✪ ايديه : `{msg.reply_to_message.from_user.id}` \n✪ البايو : {bio}"
     if msg.reply_to_message.from_user.photo :
       await msg.delete(revoke=True)
       async for photo in c.get_chat_photos(msg.reply_to_message.from_user.id):
@@ -45,7 +46,7 @@ async def get_info(c,msg):
       username = f"@{get_bio.username}"
     else :
       username = "لا يوجد"
-    txx = f"• اسمه : {get_name(msg)}\n• معرفه : {username} \n• ايديه : `{msg.from_user.id}` \n• البايو : {bio}"
+    txx = f"✪ اسمه : {get_name(msg)}\n✪ معرفه : {username} \n✪ ايديه : `{msg.from_user.id}` \n✪ البايو : {bio}"
     if msg.from_user.photo :
       await msg.delete(revoke=True)
       async for photo in c.get_chat_photos(msg.from_user.id):

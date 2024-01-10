@@ -8,6 +8,7 @@ from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
 import asyncio
 from pyrogram.types import Message
+#سورس القرش بيمسي - @T_3_A
 
 async def get_group_call(
     client: Client, message: Message, err_msg: str = ""
@@ -35,7 +36,7 @@ async def opengc(c, msg):
             await get_group_call(c, msg, err_msg="الكول مفتوح")
         )
     ):
-        await msg.edit("الكول مفتوح اصلا يكينج")
+        await msg.edit("الكول مفتوح اصلا يليفه")
         return
     try:
             await c.invoke(
@@ -46,7 +47,7 @@ async def opengc(c, msg):
             )
             await msg.edit("تم فتح الكول بنجاح.")
     except Exception as e:
-        await msg.edit("انت م ادمن يصاحبي اصلا")
+        await msg.edit("انت م ادمن يليفه اصلا")
 @Client.on_message(filters.command("قفل الكول$", prefixes=f".") & filters.me)
 async def end_vc(c, msg):
     chat_id = msg.chat.id
@@ -55,10 +56,10 @@ async def end_vc(c, msg):
             await get_group_call(c, msg, err_msg="الكول مقفلول اصلا يكينج")
         )
     ):
-        await msg.edit("الكول مقفول اصلا يكينج")
+        await msg.edit("الكول مقفول اصلا يليفه")
         return
     try:
       await c.invoke(DiscardGroupCall(call=group_call))
       await msg.edit("تم قفل الكول بنجاح.")
     except:
-        await msg.edit("انت م ادمن يصاحبي اصلا")
+        await msg.edit("انت م ادمن يليفه اصلا")

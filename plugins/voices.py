@@ -2,6 +2,7 @@ import speech_recognition as sr
 from pyrogram import Client, filters
 from pydub import AudioSegment
 from os import remove
+#سورس القرش بيمسي - @T_3_A
 
 
 @Client.on_message(filters.command(["اكتب$", "وش يقول$"], prefixes=".") & filters.me)

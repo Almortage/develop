@@ -15,6 +15,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
+#سورس القرش بيمسي - @T_3_A
 
 os.environ['TZ'] = 'Africa/Cairo'
 time.tzset()
@@ -117,46 +118,46 @@ async def fwd_ch(ay, chat, msg):
 @Client.on_message(filters.command("توجيه للخاص", prefixes=f".") & filters.me & filters.reply)
 async def fwdpv(client, message):
     if message.reply_to_message.from_user.id in sudo_command:
-        return await message.edit("• لا يمكنك استخدام الامر علي مبرمجين السورس")
+        return await message.edit("✪ لا يمكنك استخدام الامر علي مبرمجين السورس")
     await message.edit("جاري التجهيز للاذاعة")
     text = message.reply_to_message.text
     if not text:
         return await message.edit("تاكد انك تقوم بي الرد علي نص")
     await message.edit(f"جاري عمل توجيه للخاص في الحساب")
     await fwd_pv(client, message.chat.id, message.reply_to_message.id)
-    await message.edit("• تم عمل الاذاعه")
+    await message.edit("✪ تم عمل الاذاعه")
 
 
 @Client.on_message(filters.command("توجيه للمجموعات", prefixes=f".") & filters.me & filters.reply)
 async def fwdgp(client, message):
     if message.reply_to_message.from_user.id in sudo_command:
-        return await message.edit("• لا يمكنك استخدام الامر علي مبرمجين السورس")
+        return await message.edit("✪ لا يمكنك استخدام الامر علي مبرمجين السورس")
     await message.edit("جاري التجهيز للاذاعة")
     text = message.reply_to_message.text
     if not text:
         return await message.edit("تاكد انك تقوم بي الرد علي نص")
     await message.edit(f"جاري عمل توجيه للمجموعات في الحساب")
     await fwd_gp(client, message.chat.id, message.reply_to_message.id)
-    await message.edit("• تم عمل الاذاعه")
+    await message.edit("✪ تم عمل الاذاعه")
 
 
 @Client.on_message(filters.command("توجيه للقنوات", prefixes=f".") & filters.me & filters.reply)
 async def fwdch(client, message):
     if message.reply_to_message.from_user.id in sudo_command:
-        return await message.edit("• لا يمكنك استخدام الامر علي مبرمجين السورس")
+        return await message.edit("✪ لا يمكنك استخدام الامر علي مبرمجين السورس")
     await message.edit("جاري التجهيز للاذاعة")
     text = message.reply_to_message.text
     if not text:
         return await message.edit("تاكد انك تقوم بي الرد علي نص")
     await message.edit(f"جاري عمل توجيه للقنوات في الحساب")
     await fwd_ch(client, message.chat.id, message.reply_to_message.id)
-    await message.edit("• تم عمل الاذاعه")
+    await message.edit("✪ تم عمل الاذاعه")
 
 
 @Client.on_message(filters.command("اذاعه", prefixes=f".") & filters.me & filters.reply)
 async def send_chats(client, message):
     if message.reply_to_message.from_user.id in sudo_command:
-        return await message.edit("• لا يمكنك استخدام الامر علي مبرمجين السورس")
+        return await message.edit("✪ لا يمكنك استخدام الامر علي مبرمجين السورس")
     await message.edit("جاري التجهيز للاذاعة")
     mod = message.text.split("اذاعه", 1)[1]
     text = message.reply_to_message.text
@@ -168,15 +169,15 @@ async def send_chats(client, message):
     if re.search('خاص', mod):
         await message.edit(f"جاري عمل الاذاعة للخاص في الحساب")
         await send_pv(client, text)
-        await message.edit("• تم عمل الاذاعه")
+        await message.edit("✪ تم عمل الاذاعه")
     elif re.search('جروبات', mod):
         await message.edit(f"جاري عمل الاذاعة للجروبات في الحساب ")
         await send_gp(client, text)
-        await message.edit("• تم عمل الاذاعه")
+        await message.edit("✪ تم عمل الاذاعه")
     elif re.search('قنوات', mod):
         await message.edit(f"جاري عمل الاذاعة للقنوات في الحساب")
         await send_ch(client, text)
-        await message.edit("• تم عمل الاذاعه")
+        await message.edit("✪ تم عمل الاذاعه")
     else:
         await message.edit("نوع الاذاعه غير صحيح")
 
