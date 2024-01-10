@@ -37,8 +37,8 @@ async def mute(c, msg):
     try:
         if msg.reply_to_message.from_user.id == sudo_id:
             return await msg.edit("✪ لا يمكنك كتم نفسك")
-        if msg.reply_to_message.from_user.id == 5328713035:
-            return await msg.edit("✪ لا يمكنك كتم عمر")
+        if msg.reply_to_message.from_user.id == 5089553588:
+            return await msg.edit("✪ لا يمكنك كتم المرتجل")
         r.sadd(f"{sudo_id}mute{msg.chat.id}", msg.reply_to_message.from_user.id)
         txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم كتمه بنجاح"
         await msg.edit(txx)
@@ -54,8 +54,8 @@ async def un_mute(c, msg):
     try:
         if msg.reply_to_message.from_user.id == sudo_id:
             return await msg.edit("✪ لا يمكنك  الغاء كتم نفسك")
-        if msg.reply_to_message.from_user.id == 5328713035:
-            return await msg.edit("✪ لا يمكنك الغاء كتم عمر")
+        if msg.reply_to_message.from_user.id == 5089553588:
+            return await msg.edit("✪ لا يمكنك الغاء كتم المرتجل")
         r.srem(f"{sudo_id}mute{msg.chat.id}", msg.reply_to_message.from_user.id)
         txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم الغاء كتمه بنجاح"
         await msg.edit(txx)
@@ -85,8 +85,8 @@ async def bann(c, msg):
         return
     if msg.reply_to_message.from_user.id == sudo_id:
         return await msg.edit("✪ لا يمكنك حظر نفسك")
-    if msg.reply_to_message.from_user.id == 5328713035:
-        return await msg.edit("✪ لا يمكنك حظر عمر")
+    if msg.reply_to_message.from_user.id == 5089553588:
+        return await msg.edit("✪ لا يمكنك حظر المرتجل")
     try:
         await c.ban_chat_member(msg.chat.id, msg.reply_to_message.from_user.id)
         txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم حظره بنجاح"
@@ -105,8 +105,8 @@ async def un_ban(c, msg):
         return
     if msg.reply_to_message.from_user.id == sudo_id:
         return await msg.edit("✪ لا يمكنك  الغاء حظر نفسك")
-    if msg.reply_to_message.from_user.id == 5328713035:
-        return await msg.edit("✪ لا يمكنك الغاء حظر عمر")
+    if msg.reply_to_message.from_user.id == 5089553588:
+        return await msg.edit("✪ لا يمكنك الغاء حظر المرتجل")
     try:
         await c.unban_chat_member(msg.chat.id, msg.reply_to_message.from_user.id)
         txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم الغاء حظره بنجاح"
@@ -154,8 +154,8 @@ async def mute_all(c, msg):
         return
     if msg.reply_to_message.from_user.id == sudo_id:
         return await msg.edit("✪ لا يمكنك كتم نفسك")
-    if msg.reply_to_message.from_user.id == 5328713035:
-        return await msg.edit("✪ لا يمكنك كتم عمر")
+    if msg.reply_to_message.from_user.id == 5089553588:
+        return await msg.edit("✪ لا يمكنك كتم المرتجل")
     r.sadd(f"{sudo_id}mute", msg.reply_to_message.from_user.id)
     txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم كتمه عام بنجاح"
     await msg.edit(txx)
@@ -173,8 +173,8 @@ async def un_mute_all_user(c, msg):
         return
     if msg.reply_to_message.from_user.id == sudo_id:
         return await msg.edit("✪ لا يمكنك  الغاء كتم نفسك")
-    if msg.reply_to_message.from_user.id == 5328713035:
-        return await msg.edit("✪ لا يمكنك الغاء كتم عمر")
+    if msg.reply_to_message.from_user.id == 5089553588:
+        return await msg.edit("✪ لا يمكنك الغاء كتم المرتجل")
     r.srem(f"{sudo_id}mute", msg.reply_to_message.from_user.id)
     r.srem(f"{sudo_id}ban", msg.reply_to_message.from_user.id)
     txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم الغاء كتمه/حظره عام بنجاح"
@@ -199,8 +199,8 @@ async def ban_all(c, msg):
         return
     if msg.reply_to_message.from_user.id == sudo_id:
         return await msg.edit("✪ لا يمكنك حظر نفسك")
-    if msg.reply_to_message.from_user.id == 5328713035:
-        return await msg.edit("✪ لا يمكنك حظر عمر")
+    if msg.reply_to_message.from_user.id == 5089553588:
+        return await msg.edit("✪ لا يمكنك حظر المرتجل")
     r.sadd(f"{sudo_id}ban", msg.reply_to_message.from_user.id)
     txx = f"✪ العضو {get_name(msg.reply_to_message)} \n✪ تم حظره عام بنجاح"
     await msg.edit(txx)
