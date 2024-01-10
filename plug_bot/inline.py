@@ -3,10 +3,10 @@ from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,
                             InlineKeyboardMarkup, InlineKeyboardButton)
 from config import *
 import asyncio
-#سورس القرش بيمسي - @Almortagel_12
+#سورس المرتجل بيمسي - @Almortagel_12
 
 
-@bot.on_inline_query(filters.regex("^اوامر$") )
+@bot.on_inline_query(filters.regex("^الاوامر$") )
 async def answer(client, inline_query):
     reply_markup = InlineKeyboardMarkup(
             [[
