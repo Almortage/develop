@@ -3,10 +3,8 @@ from pyrogram import Client, filters
 from config import *
 from os import remove
 from autoname import main as name
-#سورس القرش بيمسي - @T_3_A
 
 user_name = Mody.USER_NAME
-
 
 @Client.on_message(filters.command("انتحال$", prefixes=f".") & filters.me)
 async def copy_user(client, message):
