@@ -17,7 +17,7 @@ api_hash = Mody.API_HASH
 session = Mody.SESSION
 token = Mody.TG_BOT_TOKEN
 sudo_command = [5089553588]
-pm = Mody.MENTION
+pm = "5089553588"
 mention = Mody.MENTION
 plugins = dict(root="plugins")
 app = Client(via,api_id , api_hash ,in_memory=True,session_string = session,plugins=plugins)
