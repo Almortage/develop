@@ -325,7 +325,7 @@ async def jio_2(c, msg):
         await asyncio.sleep(animation_interval)
         await msg.edit(animation_chars[i % 19])
 
-@Client.on_message(filters.command(["اوامري$","اوامر$","الاوامر"], prefixes=f".") & filters.me)
+@Client.on_message(filters.command(["اوامري$","اوامر$"], prefixes=f".") & filters.me)
 async def shark(c, msg):
     animation_interval = 1
     animation_ttl = range(19)
