@@ -44,13 +44,12 @@
             "value": ""           		
 	   }
 	},
-		"buildpacks": [
+	"buildpacks": [
 		{
 			"url": "heroku/python"
 		}
 	]
 }
-
 
 
 
