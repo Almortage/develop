@@ -1,3 +1,4 @@
+from mody import Mody
 from pyrogram import Client, filters
 from config import *
 from os import remove
