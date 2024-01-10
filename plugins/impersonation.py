@@ -1,7 +1,10 @@
+from mody import Mody
 from pyrogram import Client, filters
 from config import *
 from os import remove
 from autoname import main as name
+
+user_name = Mody.USER_NAME
 
 
 @Client.on_message(filters.command("انتحال$", prefixes=f".") & filters.me)
@@ -9,10 +12,10 @@ async def copy_user(client, message):
     if message.reply_to_message and message.reply_to_message.from_user:
         id = message.reply_to_message.from_user.id
     else:
-        return await message.edit("✪ قم بي الرد علي العضو")
+        return await message.edit("• قم بي الرد علي العضو")
     if message.reply_to_message.from_user.id in sudo_command:
-        return await message.edit("✪ لا يمكنك استخدام الامر علي مبرمجين السورس")
-    await message.edit("✪ جاري انتحاله ..")
+        return await message.edit("• لا يمكنك استخدام الامر علي مبرمجين السورس")
+    await message.edit("• جاري انتحاله ..")
     r.delete(f"{sudo_id}clockk")
     if not r.get(f'{sudo_id}:copy_user'):
         me_info = await client.get_chat(sudo_id)
@@ -45,15 +48,15 @@ async def copy_user(client, message):
         await client.update_profile(last_name=us_info.last_name)
     else:
         await client.update_profile(last_name="")
-    await message.edit("✪ تم الانتحال")
+    await message.edit("• تم الانتحال")
 
 
 @Client.on_message(filters.command("رجوع$", prefixes=f".") & filters.me)
 async def uncopy_user(client, message):
     if not r.get(f'{sudo_id}:copy_user'):
-        return await message.edit("✪ لم تقم بانتحال احد")
-    await message.edit("✪ جاري الرجوع الي الاعدادات الافتراضيه ..")
-    first_name = r.get(f'{sudo_id}:copy_user:first_name')
+        return await message.edit("• لم تقم بانتحال احد")
+    await message.edit("• جاري الرجوع الي الاعدادات الافتراضيه ..")
+    first_name = user_name
     bio = r.get(f'{sudo_id}:copy_user:bio')
     r.delete(f'{sudo_id}:copy_user')
     if bio:
@@ -61,7 +64,7 @@ async def uncopy_user(client, message):
     else:
         await client.update_profile(bio="")
     if first_name:
-        await client.update_profile(first_name=first_name)
+        await client.update_profile(first_name=user_name)
     if r.get(f'{sudo_id}:copy_user:photo'):
         async for photo in app.get_chat_photos("me"):
             my_photo = photo.file_id
@@ -69,5 +72,5 @@ async def uncopy_user(client, message):
             break
     r.delete(f"{sudo_id}:copy_user:photo")
     r.set(f"{sudo_id}clockk", first_name)
-    await message.edit("✪ تم الرجوع الي الاعدادات الافتراضيه")
+    await message.edit("• تم الرجوع الي الاعدادات الافتراضيه")
     await name()
