@@ -599,3 +599,7 @@ async def doama(c, msg):
 @Client.on_message(filters.command("مش اسمحلك", prefixes=f".") & filters.me)
 async def asmahlk(c, msg):    
      await msg.reply_voice("https://t.me/MemesVoices/31")
+@Client.on_message(filters.command("تلاوات", prefixes=f".") & filters.me)
+async def tlawat(c, msg): 
+    rl = random.randint(24,618)   
+     await msg.reply_voice("https://t.me/EIEI06/{rl}")
