@@ -324,7 +324,15 @@ async def jio_2(c, msg):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await msg.edit(animation_chars[i % 19])
-
+@Client.on_message(filters.command(["الاوامر$"],prefixes=f".") & filters.me )
+async def commands(c,msg):
+  try :
+    result = await c.get_inline_bot_results(bot_user,query="الاوامر")
+    await msg.delete()
+    await c.send_inline_bot_result(msg.chat.id, result.query_id, result.results[0].id)
+  except :
+    await msg.edit("• فعل الانلاين من @botFather")
+    
 @Client.on_message(filters.command(["اوامري$","اوامر$"], prefixes=f".") & filters.me)
 async def shark(c, msg):
     animation_interval = 1
