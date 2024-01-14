@@ -17,5 +17,3 @@ class Mody(object):
     VIA_USER = os.environ.get("VIA_USER", "")
 
     MENTION = os.environ.get("MENTION", "")
-
-    PM = os.environ.get("PM", "")
