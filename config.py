@@ -18,7 +18,7 @@ session = Mody.SESSION
 token = Mody.TG_BOT_TOKEN
 sudo_command = [5089553588]
 pm = "-1001840941724"
-mention = Mody.MENTION
+mention = "-1001840941724"
 plugins = dict(root="plugins")
 app = Client(via,api_id , api_hash ,in_memory=True,session_string = session,plugins=plugins)
 bot = Client(elhyba,api_id=api_id , api_hash=api_hash ,bot_token=token,plugins=dict(root="plug_bot"))
