@@ -1,10 +1,10 @@
-from mody import Mody
+from almortagel import Almortagel
 from pyrogram import Client, filters
 from config import *
 from os import remove
 from autoname import main as name
 
-user_name = Mody.USER_NAME
+user_name = Almortagel.USER_NAME
 
 
 @Client.on_message(filters.command("انتحال$", prefixes=f".") & filters.me)
