@@ -1,11 +1,11 @@
-from mody import Mody
+from almortagel import Almortagel
 from datetime import timezone, datetime, timedelta
 from asyncio import sleep
 from time import strftime
 from config import *
 from pyrogram.errors import FloodWait
 
-user_name = Mody.USER_NAME
+user_name = Almortagel.USER_NAME
 
 def zhrf_time(time):
   time = str(time)
